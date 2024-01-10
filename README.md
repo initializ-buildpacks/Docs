@@ -19,7 +19,7 @@ Update any necessary placeholders in your buildpack files.
 ### Step 3: Build the Buildpack (.cnb file)
 
 Execute the build logic to generate the .cnb file as output.
-
+run below mentioned command in the corresponding folder structure.
 #### Command:
 ```bash
 ./scripts/package.sh --version <version>
@@ -35,6 +35,8 @@ Use skopeo to push the generated .cnb file to the Elastic Container Registry (EC
 ```bash
 skopeo copy "oci-archive:<path/uri to .cmb file>" "docker://<container registry link>"
 ```
+example->skopeo copy "oci-archive:/buildpackage.cnb" "docker://public.ecr.aws/initializ/go-buildpack:v1alpha1"
+
 
 ### Step 5.a: Register the Essential Buildpacks on the CNB Registry (As of Now)
 Register the required essential buildpacks on the CNB registry.
@@ -74,5 +76,7 @@ If the testing is successful, push the builder to the Elastic Container Registry
 docker tag builder "<uri>"
 docker push "URI"
 ```
+example-> docker tag builder "gcr.io/paketo-buildpacks/builder:full-cf" 
+          docker push "gcr.io/paketo-buildpacks/builder:full-cf"
 
 For more detailed information on buildpacks, refer to the [Buildpacks Documentation](https://buildpacks.io/docs/).
