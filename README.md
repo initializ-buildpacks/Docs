@@ -17,6 +17,14 @@ Make sure the repository containing your source code is prepared.
 Update any necessary placeholders in your buildpack files.
 
 ### Step 3: Build the Buildpack (.cnb file)
+
+Execute the build logic to generate the .cnb file as output.
+
+#### Command:
+```bash
+./scripts/package.sh --version <version>
+```
+
 Execute the build logic to generate the .cnb file as output.
 
 ### Step 4: Push the .cnb to ECR (Using skopeo)
