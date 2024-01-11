@@ -49,13 +49,15 @@ pack buildpack register <Uri/Path of the cnb file>
 Utilize Paketo for non-essential buildpacks.
 
 ### Step 6: Enlist All Buildpacks into the toml File of the Main Buildpack
-List all the buildpacks in the toml file of the main buildpack.
+List all the buildpacks in the buildpack.toml file of the main buildpack.
+And add the uri of the corresponding buildpacks in the package.toml file.
 
 ### Step 7: Repeat Steps 3 to 5.a
 Repeat the process from building the buildpack to registering essential buildpacks.
 
 ### Step 8: Update the Buildpack into the builder.toml
 Update the buildpack information in the builder.toml file.
+Reference the syntax from here [Builder!](https://github.com/initializ-buildpacks/full-builder/blob/main/builder.toml)
 
 ### Step 9: Create the Builder on Local
 Create the builder locally with the updated buildpack information.
