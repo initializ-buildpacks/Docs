@@ -81,4 +81,70 @@ docker push "URI"
 example-> docker tag builder "gcr.io/paketo-buildpacks/builder:full-cf" 
           docker push "gcr.io/paketo-buildpacks/builder:full-cf"
 
+### For any buildpack which do not have any package.sh file after cloning the repo run this command
+
+```bash
+export SOURCE_PATH="/root/<buildpack dir>"
+ex:- export SOURCE_PATH="/root/static-buildpack"
+```
+
+### then create the buildpack folder with these command running where the buildpack.toml file is present inside the cloned github repo
+
+VERSION=<>
+ex:- 
+
+```bash
+VERSION="1.0.0"
+```
+
+```bash
+MAJOR_VERSION=$(echo $VERSION | cut -d. -f1) 
+MINOR_VERSION=$(echo $VERSION | cut -d. -f1-2)
+export CGO_ENABLED=0
+create-package \
+
+  --source . \
+
+  --destination /path/to/buildpack \
+
+  --version $VERSION
+```
+
+# Set environment variables if necessary
+
+```bash
+export INCLUDE_DEPENDENCIES="false"  # Or "true" if needed
+export SOURCE_PATH="/path/to/source"  # Set the path to your source if needed
+export VERSION="1.0.0"  # Set the version of your buildpack
+export OS="linux"  # Set the OS of your buildpack
+```
+
+
+# Generate package.toml content
+
+```bash
+echo "[buildpack]" > "${HOME}/package.toml"
+echo "uri = \"${HOME}/buildpack\"" >> "${HOME}/package.toml"
+echo "" >> "${HOME}/package.toml"
+echo "[platform]" >> "${HOME}/package.toml"
+echo "os = \"${OS}\"" >> "${HOME}/package.toml"
+```
+
+### Finally run this to create your docker image
+
+```bash
+pack buildpack package \
+  "docker.io/path/to/buildpack:${VERSION}" \
+  --config ${HOME}/package.toml
+```
+
+
+now if you run 
+
+```bash
+docker images
+```
+ 
+you will see an image with this name and version :- docker.io/path/to/buildpack:${VERSION}
+
 For more detailed information on buildpacks, refer to the [Buildpacks Documentation](https://buildpacks.io/docs/).
