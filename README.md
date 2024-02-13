@@ -114,7 +114,7 @@ create-package \
 
 ```bash
 export INCLUDE_DEPENDENCIES="false"  # Or "true" if needed
-export SOURCE_PATH="/path/to/source"  # Set the path to your source if needed
+export SOURCE_PATH="/root/<buildpack dir>"  # Set the path to your source if needed
 export VERSION="1.0.0"  # Set the version of your buildpack
 export OS="linux"  # Set the OS of your buildpack
 ```
