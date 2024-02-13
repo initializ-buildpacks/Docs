@@ -1,4 +1,4 @@
-description = "Initializ Distroless base image with buildpacks for Go, NodeJS, Python, Java .NET Core, PHP, Ruby, Apache HTTPD, NGINX and Procfile"
+description = "Initializ Distroless base image with buildpacks for Go, NodeJS, Python, Java, .NET Core, PHP, Ruby, Apache HTTPD, NGINX and Procfile"
 
 [[buildpacks]]
   uri = "docker://public.ecr.aws/initializ/fullgo@sha256:4f45ead673618c1efa62992f875b3a23227421c866accdadc59eb73d761d2862"
