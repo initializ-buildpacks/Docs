@@ -124,7 +124,7 @@ export OS="linux"  # Set the OS of your buildpack
 
 ```bash
 echo "[buildpack]" > "${HOME}/package.toml"
-echo "uri = \"${HOME}/buildpack\"" >> "${HOME}/package.toml"
+echo "uri = \"/path/to/buildpack\"" >> "${HOME}/package.toml"
 echo "" >> "${HOME}/package.toml"
 echo "[platform]" >> "${HOME}/package.toml"
 echo "os = \"${OS}\"" >> "${HOME}/package.toml"
