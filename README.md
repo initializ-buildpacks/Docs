@@ -102,12 +102,9 @@ MAJOR_VERSION=$(echo $VERSION | cut -d. -f1)
 MINOR_VERSION=$(echo $VERSION | cut -d. -f1-2)
 export CGO_ENABLED=0
 create-package \
-
-  --source . \
-
-  --destination /path/to/buildpack \
-
-  --version $VERSION
+  --source "$SOURCE_PATH" \
+  --destination "/path/to/buildpack" \
+  --version "$VERSION"
 ```
 
 # Set environment variables if necessary
