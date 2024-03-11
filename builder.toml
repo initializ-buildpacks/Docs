@@ -1,20 +1,20 @@
 description = "Initializ Distroless base image with buildpacks for Go, NodeJS, Python, Java, .NET Core, PHP, Ruby, Apache HTTPD, NGINX and Procfile"
  
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/go@sha256:42f3155ea257508b2c414870697b6ed194375c758de213ebe9da3ced729053be"
-  version = "1.0.1"
+  uri = "public.ecr.aws/initializ/buildpack/go@sha256:b362b2931939f45f76611f6bf1da147715583119267f0c9ce6773fc0d2fbb348"
+  version = "1.0.2"
  
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/nodejs@sha256:437ad4efb145c2308b716ed8a70fc687e27eafbed9509a11129829caada35f02"
-  version = "2.2.2"
+  uri = "public.ecr.aws/initializ/buildpack/nodejs@sha256:08da8f9143ce909398fe3fc469e1cf62a08ceaadbe9029f42db33f1d7f9e8450"
+  version = "2.2.3"
  
 [[buildpacks]]
-  uri = "public.ecr.aws/initializ/buildpack/python@sha256:7dd0a9f657bc734ec139f0bb6598277e4c50f2cc3c112e9654a7f6ad4f0f4def"
-  version = "4.0.1"
+  uri = "public.ecr.aws/initializ/buildpack/python@sha256:36ce50cbc407ef025200fe0d3daa730f67fe4ac7a8ca39ab6be1fafe616f4023"
+  version = "4.0.2"
  
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/java@sha256:3f3d021d44dec366512b57cf84db8ccfbfc39a22cd64353cf16c9b1c7c506b90"
-  version = "2.0.1"
+  uri = "public.ecr.aws/initializ/buildpack/java@sha256:aec4a0d573bf9c5a309c28482710fbfe1526c7f96b8a95cce37b175c9e9ca5cf"
+  version = "2.0.2"
  
 [[buildpacks]]
   uri = "docker://public.ecr.aws/initializ/buildpack/dotnetfull@sha256:fea8accdd0fb78ba64d1829a296fd6a397b8802932cc4ad78efad4095b336cf4"
@@ -29,37 +29,37 @@ description = "Initializ Distroless base image with buildpacks for Go, NodeJS, P
   version = "1.0.2" 
 
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/java-native-image@sha256:45eb3f0a11cdc10909a3e2892d92b657d9a8d2c9e582401c862c3ecb1c0474f4"
-  version = "9.0.0" 
+  uri = "public.ecr.aws/initializ/buildpack/java-native-image@sha256:ac755349ce60a23389fe3fb65925ccafc3d407a619a190c4aa6ed72ed56f89f8"
+  version = "9.0.1" 
 
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/procfile@sha256:fe2979ecc343c1fe8cc13b8d9c0bd931d86503447be2fa5d3d299ecb7a35329e"
-  version = "5.6.9" 
+  uri = "public.ecr.aws/initializ/buildpack/procfile@sha256:f9f9558b1ead4e8fc781b5e62df54eac074c2a240bab99737b4c824c6e6f3712"
+  version = "5.6.10" 
  
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/go"
-    version = "1.0.1"
+    version = "1.0.2"
  
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/nodejs"
-    version = "2.2.2"
+    version = "2.2.3"
  
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/python"
-    version = "4.0.1"
+    version = "4.0.2"
  
  
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/java"
-    version = "2.0.1"
+    version = "2.0.2"
  
 [[order]]
  
@@ -77,19 +77,19 @@ description = "Initializ Distroless base image with buildpacks for Go, NodeJS, P
  
   [[order.group]]
     id = "initializ-buildpacks/web-servers"
-    version = "1.0.1" 
+    version = "1.0.2" 
 
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/java-native-image"
-    version = "9.0.0"
+    version = "9.0.1"
 
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/procfile"
-    version = "5.6.9"
+    version = "5.6.10"
  
 
 # Base images used to create the builder
