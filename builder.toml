@@ -25,7 +25,7 @@ description = "Initializ Distroless base image with buildpacks for Go, NodeJS, P
   version = "1.0.5"   
 
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/web-servers@sha256:80c10029f14558aa02989ec807d59e5ef76ccf05f2afe24f65e645d46e802f3a"
+  uri = "docker://public.ecr.aws/initializ/buildpack/web-servers@sha256:05f51febf87d72d579d42f7f7b64ae52e577a02bd888021f80b7c37c2866a437"
   version = "1.0.4" 
 
 [[buildpacks]]
