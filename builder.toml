@@ -21,12 +21,12 @@ description = "Initializ Distroless base image with buildpacks for Go, NodeJS, P
   version = "1.0.9"  
  
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/php@sha256:f549166e43e2b84a2159cccc6ac9d1911a50a9844f366cde004e54311e358d6f"
-  version = "1.0.4"   
+  uri = "docker://public.ecr.aws/initializ/buildpack/php@sha256:42c5a733c9bef5f6b86a30905247da47e4a45d5fd4e38ef06e1e76f42ed1499f"
+  version = "1.0.5"   
 
 [[buildpacks]]
-  uri = "docker://public.ecr.aws/initializ/buildpack/web-servers@sha256:1259c10adde1e5a1731b576959d88be35cf928fc43a1aec97e6d7328652fa150"
-  version = "1.0.2" 
+  uri = "docker://public.ecr.aws/initializ/buildpack/web-servers@sha256:80c10029f14558aa02989ec807d59e5ef76ccf05f2afe24f65e645d46e802f3a"
+  version = "1.0.3" 
 
 [[buildpacks]]
   uri = "public.ecr.aws/initializ/buildpack/java-native-image@sha256:ac755349ce60a23389fe3fb65925ccafc3d407a619a190c4aa6ed72ed56f89f8"
@@ -71,13 +71,13 @@ description = "Initializ Distroless base image with buildpacks for Go, NodeJS, P
  
   [[order.group]]
     id = "initializ-buildpacks/php"
-    version = "1.0.4"    
+    version = "1.0.5"    
 
 [[order]]
  
   [[order.group]]
     id = "initializ-buildpacks/web-servers"
-    version = "1.0.2" 
+    version = "1.0.3" 
 
 [[order]]
  
